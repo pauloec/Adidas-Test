@@ -1,0 +1,43 @@
+{
+  "name": "Review",
+  "version": "0.1.0",
+  "summary": "A short description of Review.",
+  "description": "Review module",
+  "homepage": "http://github.com/pauloec",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "paulo.ec@hotmail.com": "paulo.ec@hotmail.com"
+  },
+  "source": {
+    "git": "",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "11.0"
+  },
+  "swift_versions": "5.0",
+  "source_files": "Review/**/*",
+  "resource_bundles": {
+    "Review": [
+      "Assets/**/*.{png,xcassets,json,txt,storyboard,xib,xcdatamodeld,strings}"
+    ]
+  },
+  "dependencies": {
+    "RxSwift": [
+
+    ],
+    "RxCocoa": [
+
+    ],
+    "SnapKit": [
+
+    ],
+    "Core": [
+
+    ]
+  },
+  "swift_version": "5.0"
+}

@@ -1,0 +1,12 @@
+use_frameworks!
+platform :ios, '11.0'
+
+target 'Review_Example' do
+  # The module itself
+  pod 'Review', :path => '../'
+
+  # For the podspec dependency
+
+
+end
+

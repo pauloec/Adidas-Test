@@ -1,0 +1,8 @@
+${PODS_ROOT}/Target Support Files/Pods-Adidas Test/Pods-Adidas Test-frameworks.sh
+${BUILT_PRODUCTS_DIR}/Core/Core.framework
+${BUILT_PRODUCTS_DIR}/ProductList/ProductList.framework
+${BUILT_PRODUCTS_DIR}/Review/Review.framework
+${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework
+${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework
+${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework
+${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework

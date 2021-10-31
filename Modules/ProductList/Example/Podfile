@@ -1,0 +1,10 @@
+use_frameworks!
+platform :ios, '11.0'
+
+target 'ProductList_Example' do
+  # The module itself
+  pod 'ProductList', :path => '../'
+
+  # For the podspec dependency
+
+end

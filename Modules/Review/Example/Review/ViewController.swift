@@ -1,8 +1,8 @@
 //
 //  ViewController.swift
-//  Adidas Test
+//  ___MODULEBASENAME____Example
 //
-//  Created by Paulo Correa on 31/10/2564 BE.
+//  Created by Nithi Kulasiriswatdi on 5/7/2564 BE.
 //
 
 import UIKit

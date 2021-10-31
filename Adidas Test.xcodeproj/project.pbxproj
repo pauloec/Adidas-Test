@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		A4350EF2272E87D000EF7349 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4350EF1272E87D000EF7349 /* AppDelegate.swift */; };
 		A4350EF4272E87D000EF7349 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4350EF3272E87D000EF7349 /* SceneDelegate.swift */; };
-		A4350EF6272E87D000EF7349 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4350EF5272E87D000EF7349 /* ViewController.swift */; };
 		A4350EF9272E87D000EF7349 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4350EF7272E87D000EF7349 /* Main.storyboard */; };
 		A4350EFB272E87D500EF7349 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4350EFA272E87D500EF7349 /* Assets.xcassets */; };
 		A4350EFE272E87D500EF7349 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4350EFC272E87D500EF7349 /* LaunchScreen.storyboard */; };
+		B2FDF3DD7025E904EB668C15 /* Pods_Adidas_Test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6B5DCEB0AC68AE5CD4D70B4 /* Pods_Adidas_Test.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1CC1105513BAF906E44ECE5D /* Pods-Adidas Test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Adidas Test.debug.xcconfig"; path = "Target Support Files/Pods-Adidas Test/Pods-Adidas Test.debug.xcconfig"; sourceTree = "<group>"; };
+		2C8A12C8BD3453AA128AF454 /* Pods-Adidas Test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Adidas Test.release.xcconfig"; path = "Target Support Files/Pods-Adidas Test/Pods-Adidas Test.release.xcconfig"; sourceTree = "<group>"; };
 		A4350EEE272E87D000EF7349 /* Adidas Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Adidas Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4350EF1272E87D000EF7349 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A4350EF3272E87D000EF7349 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A4350EF5272E87D000EF7349 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A4350EF8272E87D000EF7349 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A4350EFA272E87D500EF7349 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A4350EFD272E87D500EF7349 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A4350EFF272E87D500EF7349 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D6B5DCEB0AC68AE5CD4D70B4 /* Pods_Adidas_Test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Adidas_Test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2FDF3DD7025E904EB668C15 /* Pods_Adidas_Test.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4AF50FF5CE4DFFA990052C33 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1CC1105513BAF906E44ECE5D /* Pods-Adidas Test.debug.xcconfig */,
+				2C8A12C8BD3453AA128AF454 /* Pods-Adidas Test.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		8F8AB4D8AB2CC57661FA358B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D6B5DCEB0AC68AE5CD4D70B4 /* Pods_Adidas_Test.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A4350EE5272E87D000EF7349 = {
 			isa = PBXGroup;
 			children = (
 				A4350EF0272E87D000EF7349 /* Adidas Test */,
 				A4350EEF272E87D000EF7349 /* Products */,
+				4AF50FF5CE4DFFA990052C33 /* Pods */,
+				8F8AB4D8AB2CC57661FA358B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,7 +80,6 @@
 			children = (
 				A4350EF1272E87D000EF7349 /* AppDelegate.swift */,
 				A4350EF3272E87D000EF7349 /* SceneDelegate.swift */,
-				A4350EF5272E87D000EF7349 /* ViewController.swift */,
 				A4350EF7272E87D000EF7349 /* Main.storyboard */,
 				A4350EFA272E87D500EF7349 /* Assets.xcassets */,
 				A4350EFC272E87D500EF7349 /* LaunchScreen.storyboard */,
@@ -74,9 +95,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A4350F02272E87D500EF7349 /* Build configuration list for PBXNativeTarget "Adidas Test" */;
 			buildPhases = (
+				E11403B0D3D16B26640CA518 /* [CP] Check Pods Manifest.lock */,
 				A4350EEA272E87D000EF7349 /* Sources */,
 				A4350EEB272E87D000EF7349 /* Frameworks */,
 				A4350EEC272E87D000EF7349 /* Resources */,
+				2E0821263D912E6DB4E74589 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,12 +156,53 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2E0821263D912E6DB4E74589 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Adidas Test/Pods-Adidas Test-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Adidas Test/Pods-Adidas Test-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Adidas Test/Pods-Adidas Test-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E11403B0D3D16B26640CA518 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Adidas Test-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A4350EEA272E87D000EF7349 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A4350EF6272E87D000EF7349 /* ViewController.swift in Sources */,
 				A4350EF2272E87D000EF7349 /* AppDelegate.swift in Sources */,
 				A4350EF4272E87D000EF7349 /* SceneDelegate.swift in Sources */,
 			);
@@ -284,6 +348,7 @@
 		};
 		A4350F03272E87D500EF7349 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1CC1105513BAF906E44ECE5D /* Pods-Adidas Test.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -294,7 +359,7 @@
 				INFOPLIST_FILE = "Adidas Test/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -306,12 +371,13 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		A4350F04272E87D500EF7349 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2C8A12C8BD3453AA128AF454 /* Pods-Adidas Test.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -322,7 +388,7 @@
 				INFOPLIST_FILE = "Adidas Test/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -334,7 +400,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
