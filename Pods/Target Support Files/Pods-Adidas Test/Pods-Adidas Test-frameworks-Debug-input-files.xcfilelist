@@ -1,4 +1,5 @@
 ${PODS_ROOT}/Target Support Files/Pods-Adidas Test/Pods-Adidas Test-frameworks.sh
+${BUILT_PRODUCTS_DIR}/APILayer/APILayer.framework
 ${BUILT_PRODUCTS_DIR}/Core/Core.framework
 ${BUILT_PRODUCTS_DIR}/ProductList/ProductList.framework
 ${BUILT_PRODUCTS_DIR}/Review/Review.framework

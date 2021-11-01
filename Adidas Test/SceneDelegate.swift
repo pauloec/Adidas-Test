@@ -7,11 +7,13 @@
 
 import UIKit
 import ProductList
+import Review
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
     var rootCoordinator: ProductListCoordinator?
+    var reviewCoordinator: ReviewCoordinator?
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
@@ -20,7 +22,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
 
         let navigationController = UINavigationController()
-        rootCoordinator = ProductListCoordinator(navigationController: navigationController, callBack: {})
+        rootCoordinator = ProductListCoordinator(navigationController: navigationController,
+                                                 callBack: { [weak self] productId in
+            // Call Review
+        })
+        rootCoordinator?.start()
 
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = navigationController

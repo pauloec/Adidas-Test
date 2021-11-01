@@ -20,5 +20,6 @@ Pod::Spec.new do |s|
   s.dependency 'RxCocoa'
   s.dependency 'SnapKit'
   s.dependency 'Core'
+  s.dependency 'APILayer'
 
 end

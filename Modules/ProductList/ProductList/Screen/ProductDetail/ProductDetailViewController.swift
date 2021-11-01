@@ -1,8 +1,8 @@
 //
-//  ProductListViewController.swift
-//  ProductList
+//  ProductDetailViewController.swift
+//  Core
 //
-//  Created by Paulo Correa on 10/5/2564 BE.
+//  Created by Paulo Correa on 1/11/2564 BE.
 //
 
 import UIKit
@@ -11,21 +11,21 @@ import RxCocoa
 import SnapKit
 import Core
 
-class ProductListViewController: UIViewController {
-    private var viewModel: ProductListViewModel!
+class ProductDetailViewController: UIViewController {
+    private var viewModel: ProductDetailViewModel!
     private let disposeBag = DisposeBag()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         bindViewModel()
         setupViews()
-        viewModel.input.onLoading.onNext(())
+        viewModel.input.onLoad.onNext(())
     }
 }
 
-extension ProductListViewController: ControllerType {
-    typealias ViewModelType = ProductListViewModel
-    
+extension ProductDetailViewController: ControllerType {
+    typealias ViewModelType = ProductDetailViewModel
+
     func configViewModel(viewModel: ViewModelType) {
         self.viewModel = viewModel
     }
@@ -52,14 +52,14 @@ extension ProductListViewController: ControllerType {
     func setupViews() {
         view.backgroundColor = .white
         let label = UILabel()
-        label.text = "ProductList"
+        label.text = "ProductDetail"
         view.addSubview(label)
         label.snp.makeConstraints { make in
             make.center.equalToSuperview()
         }
     }
-    
-    func setupDisplay(display: ProductListDisplayModel) {
+
+    func setupDisplay(display: ProductDetailDisplayModel) {
         title = display.title
     }
 }
