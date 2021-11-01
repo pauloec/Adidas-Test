@@ -1,5 +1,7 @@
 PODS:
-  - APILayer (0.1.0)
+  - APILayer (0.1.0):
+    - RxCocoa
+    - RxSwift
   - Core (0.1.0)
   - ProductList (0.1.0):
     - APILayer
@@ -47,7 +49,7 @@ EXTERNAL SOURCES:
     :path: Modules/Review
 
 SPEC CHECKSUMS:
-  APILayer: 9a2e4a008918ce76d685996a49124dc88aec0722
+  APILayer: 51adcba0b55ff07a92b0ba072bcaf6c21a0a16b2
   Core: e1b4337d835905189b352001509b84a2e83ac0d8
   ProductList: 5e5703fe6df5b64d640ae2aa2aa5d7a51bc111d5
   Review: 248a4edc07137eb23d70d91ea8bf89063e2f05b0
@@ -56,6 +58,6 @@ SPEC CHECKSUMS:
   RxSwift: d356ab7bee873611322f134c5f9ef379fa183d8f
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
 
-PODFILE CHECKSUM: 5df10c150ce62a83770e874e95f437fe15c0b924
+PODFILE CHECKSUM: e68ea853ba164302206cadfa76cdc014a32d2509
 
 COCOAPODS: 1.11.2

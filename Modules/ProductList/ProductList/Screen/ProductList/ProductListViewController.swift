@@ -15,7 +15,7 @@ class ProductListViewController: UIViewController {
     private let tableView: UITableView =  {
         let tableView = UITableView(frame: .zero, style: .plain)
         tableView.contentInsetAdjustmentBehavior = .never
-        tableView.separatorStyle = .none
+        tableView.separatorStyle = .singleLine
         tableView.showsVerticalScrollIndicator = false
         tableView.backgroundColor = .white
         tableView.rowHeight = UITableView.automaticDimension
@@ -28,9 +28,9 @@ class ProductListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        bindViewModel()
         setupViews()
-        viewModel.input.onLoad.onNext(())
+        bindViewModel()
+        viewModel.input.onDidLoad.onNext(())
     }
 }
 
@@ -43,34 +43,34 @@ extension ProductListViewController: ControllerType {
 
     func bindViewModel() {
         let output = viewModel.output
+        let input = viewModel.input
         disposeBag.insert([
-            output.display.bind(to: Binder(self) { target, value in
-                target.setupDisplay(display: value)
-            }),
-            output.loading.subscribe(onNext: { [weak self] loading in
-                if loading {
-                    //
-                } else {
-                    //
-                }
-            }),
-            output.error.subscribe(onNext: { [weak self] error in
-                print(error.localizedDescription)
-            })
+            output.display
+                .map { $0.productList }
+                .bind(to: tableView.rx.items(cellIdentifier: "ProductList",
+                                             cellType: ProductListCell.self)) { index, viewModel, cell in
+                                                 cell.configViewModel(viewModel: viewModel)
+                                             },
+            output.display
+                .map { $0.title }
+                .bind(to: rx.title),
+
+            tableView.rx.modelSelected(ProductListCellViewModel.self)
+                .flatMap { $0.output.id }
+                .bind(to: input.onTapProduct)
         ])
     }
 
     func setupViews() {
         view.backgroundColor = .white
-        let label = UILabel()
-        label.text = "ProductList"
-        view.addSubview(label)
-        label.snp.makeConstraints { make in
-            make.center.equalToSuperview()
-        }
+        setupTableView()
     }
-    
-    func setupDisplay(display: ProductListDisplayModel) {
-        title = display.title
+
+    private func setupTableView() {
+        view.addSubview(tableView)
+        tableView.snp.makeConstraints {
+            $0.edges.equalTo(view.safeAreaLayoutGuide)
+        }
+        tableView.register(ProductListCell.self, forCellReuseIdentifier: "ProductList")
     }
 }

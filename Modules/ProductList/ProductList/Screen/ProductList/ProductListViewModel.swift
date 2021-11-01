@@ -14,33 +14,29 @@ class ProductListViewModel: ViewModelType {
     var input: Input
     var output: Output
     private let disposeBag = DisposeBag()
-    private let activityIndicator = ActivityIndicator()
-    private let errorTracker = ErrorTracker()
-    private let onLoading = PublishSubject<Void>()
-    private let onTapProduct = PublishSubject<Int>()
+    private let apiClient = APIClient()
+
+    private let onDidLoad = PublishSubject<Void>()
+    private let onTapProduct = PublishSubject<String>()
     private let display = PublishSubject<ProductListDisplayModel>()
     private let onNext = PublishSubject<String>()
 
     struct Input {
-        let onLoad: AnyObserver<Void>
-        let onTapProduct: AnyObserver<Int>
+        let onDidLoad: AnyObserver<Void>
+        let onTapProduct: AnyObserver<String>
     }
     struct Output {
-        let loading: Observable<Bool>
         let display: Observable<ProductListDisplayModel>
         let onNext: Observable<String>
-        let error: Observable<Error>
     }
     
     init() {
-        input = Input(onLoad: onLoading.asObserver(),
+        input = Input(onDidLoad: onDidLoad.asObserver(),
                       onTapProduct: onTapProduct.asObserver())
 
         output = Output(
-            loading: activityIndicator.asDriver(onErrorJustReturn: false).asObservable(),
             display: display.asObservable(),
-            onNext: onNext.asObservable(),
-            error: errorTracker.asObservable()
+            onNext: onNext.asObservable()
         )
 
         observeInput()
@@ -48,13 +44,21 @@ class ProductListViewModel: ViewModelType {
 
     private func observeInput() {
         disposeBag.insert([
-            onLoading.subscribe(onNext: { [weak self] in
-                self?.sendRequest()
-            })
+            onDidLoad
+                .map { ProductListRequest() }
+                .flatMapLatest { [unowned self] request -> Observable<[ProductModel]> in
+                    return self.apiClient.send(apiRequest: request)
+                }
+                .map { $0.map { ProductListCellViewModel(name: $0.name,
+                                                         imageUrl: $0.imgUrl,
+                                                         price: "\($0.currency) \($0.price)",
+                                                         description: $0.description,
+                                                         id: $0.id) } }
+                .map { ProductListDisplayModel(title: "Product List", productList: $0) }
+                .bind(to: display),
+
+            onTapProduct
+                .bind(to: onNext)
         ])
-    }
-
-    private func sendRequest() {
-
     }
 }

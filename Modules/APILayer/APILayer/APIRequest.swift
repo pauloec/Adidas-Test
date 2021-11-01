@@ -5,7 +5,7 @@
 //  Created by Paulo Correa on 1/11/2564 BE.
 //
 
-protocol APIRequest {
+public protocol APIRequest {
     var method: RequestType { get }
     var path: String { get }
     var parameters: [String : String] { get }
@@ -22,7 +22,7 @@ extension APIRequest {
         }
 
         guard let url = components.url else {
-            fatalError("Could not get url")
+            fatalError("No URL detected")
         }
 
         var request = URLRequest(url: url)

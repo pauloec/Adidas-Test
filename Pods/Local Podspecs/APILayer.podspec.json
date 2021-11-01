@@ -20,5 +20,13 @@
   },
   "swift_versions": "5.0",
   "source_files": "APILayer/**/*",
+  "dependencies": {
+    "RxSwift": [
+
+    ],
+    "RxCocoa": [
+
+    ]
+  },
   "swift_version": "5.0"
 }
