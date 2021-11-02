@@ -8,7 +8,7 @@
 public protocol APIRequest {
     var method: RequestType { get }
     var path: String { get }
-    var parameters: [String : String] { get }
+    var parameters: [String : Any] { get }
     var version: APIVersion { get }
 }
 
@@ -23,7 +23,7 @@ extension APIRequest {
         }
 
         components.queryItems = parameters.map {
-            URLQueryItem(name: String($0), value: String($1))
+            URLQueryItem(name: String($0), value: String("\($1)"))
         }
 
         guard let url = components.url else {

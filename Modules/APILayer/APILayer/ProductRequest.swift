@@ -8,7 +8,7 @@
 public class ProductListRequest: APIRequest {
     public var method = RequestType.GET
     public var path = "product"
-    public var parameters = [String: String]()
+    public var parameters = [String: Any]()
     public var version: APIVersion = .V1
 
     public init() { }
@@ -17,7 +17,7 @@ public class ProductListRequest: APIRequest {
 public class ProductDetailRequest: APIRequest {
     public var method = RequestType.GET
     public var path = "product"
-    public var parameters = [String: String]()
+    public var parameters = [String: Any]()
     public var version: APIVersion = .V1
 
     public init(id: String) {

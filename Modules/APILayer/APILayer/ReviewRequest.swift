@@ -8,7 +8,7 @@
 public class AddReviewRequest: APIRequest {
     public var method = RequestType.POST
     public var path = "reviews"
-    public var parameters = [String: String]()
+    public var parameters = [String: Any]()
     public var version: APIVersion = .V2
 
     public init(review: ReviewModel) {
