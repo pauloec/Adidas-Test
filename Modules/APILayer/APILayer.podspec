@@ -1,8 +1,8 @@
 Pod::Spec.new do |s|
-  s.name             = 'ProductList'
+  s.name             = 'APILayer'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of ProductList.'
-  s.description      = 'ProductList module'
+  s.summary          = 'A short description of APILayer.'
+  s.description      = 'APILayer module'
   s.homepage         = 'http://github.com/pauloec'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'paulo.ec@hotmail.com' => 'paulo.ec@hotmail.com' }
@@ -11,15 +11,9 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '11.0'
   s.swift_version    = '5.0'
-  s.source_files     = 'ProductList/**/*'
-  s.resource_bundles = {
-    'ProductList' => ['Assets/**/*.{png,xcassets,json,txt,storyboard,xib,xcdatamodeld,strings}']
-  }
-  
+  s.source_files     = 'APILayer/**/*'
+
   s.dependency 'RxSwift'
   s.dependency 'RxCocoa'
-  s.dependency 'SnapKit'
-  s.dependency 'Core'
-  s.dependency 'APILayer'
 
 end

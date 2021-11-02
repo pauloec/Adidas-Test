@@ -11,8 +11,9 @@ target 'Adidas Test' do
   pod 'RxCocoa'
   pod 'SnapKit'
 
-  pod 'Review', :path => 'Modules/Review'
-  pod 'ProductList', :path => 'Modules/ProductList'
-  pod 'Core', :path => 'Modules/Core'
+  pod 'Review',       :path => 'Modules/Review'
+  pod 'ProductList',  :path => 'Modules/ProductList'
+  pod 'Core',         :path => 'Modules/Core'
+  pod 'APILayer',     :path => 'Modules/APILayer'
   
 end

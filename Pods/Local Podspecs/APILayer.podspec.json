@@ -1,8 +1,8 @@
 {
-  "name": "ProductList",
+  "name": "APILayer",
   "version": "0.1.0",
-  "summary": "A short description of ProductList.",
-  "description": "ProductList module",
+  "summary": "A short description of APILayer.",
+  "description": "APILayer module",
   "homepage": "http://github.com/pauloec",
   "license": {
     "type": "MIT",
@@ -19,26 +19,12 @@
     "ios": "11.0"
   },
   "swift_versions": "5.0",
-  "source_files": "ProductList/**/*",
-  "resource_bundles": {
-    "ProductList": [
-      "Assets/**/*.{png,xcassets,json,txt,storyboard,xib,xcdatamodeld,strings}"
-    ]
-  },
+  "source_files": "APILayer/**/*",
   "dependencies": {
     "RxSwift": [
 
     ],
     "RxCocoa": [
-
-    ],
-    "SnapKit": [
-
-    ],
-    "Core": [
-
-    ],
-    "APILayer": [
 
     ]
   },
