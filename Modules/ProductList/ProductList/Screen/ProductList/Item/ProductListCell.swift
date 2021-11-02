@@ -83,7 +83,7 @@ class ProductListCell: UITableViewCell, ControllerType {
         productImageView.snp.makeConstraints {
             $0.top.leading.equalToSuperview().offset(LayoutConstraint.ProductImage.top)
             $0.height.width.equalTo(LayoutConstraint.ProductImage.height)
-            $0.bottom.equalToSuperview()
+            $0.bottom.equalToSuperview().priority(.medium)
         }
 
         textStack.snp.makeConstraints {
@@ -110,7 +110,7 @@ extension ProductListCell {
             static let height = 100
         }
         struct TextStack {
-            static let leading = 10
+            static let leading = 20
             static let trailing = -20
         }
     }

@@ -35,7 +35,7 @@ public class ProductListCoordinator: CoordinatorType {
     }
 
     private func navigateToProductDetail(productId: String) {
-        let viewModel = ProductDetailViewModel()
+        let viewModel = ProductDetailViewModel(productId: productId)
         let rootViewController = ProductDetailViewController()
         rootViewController.configViewModel(viewModel: viewModel)
         viewModel

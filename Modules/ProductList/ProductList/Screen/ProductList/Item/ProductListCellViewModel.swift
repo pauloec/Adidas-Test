@@ -26,11 +26,7 @@ class ProductListCellViewModel: ViewModelType {
     let input: Input
     let output: Output
 
-    init(name: String,
-         imageUrl: String,
-         price: String,
-         description: String,
-         id: String) {
+    init(name: String, imageUrl: String, price: String, description: String, id: String) {
         input = Input()
         output = Output(name: BehaviorSubject<String>.init(value: name),
                         image: image,

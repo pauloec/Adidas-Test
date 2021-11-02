@@ -9,6 +9,11 @@ public protocol APIRequest {
     var method: RequestType { get }
     var path: String { get }
     var parameters: [String : String] { get }
+    var version: APIVersion { get }
+}
+
+public enum APIVersion {
+    case V1, V2
 }
 
 extension APIRequest {
