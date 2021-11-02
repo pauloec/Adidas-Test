@@ -236,6 +236,7 @@
 		A4456DF3B2798DC5156D6609A2E56629 /* ReplaySubject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BDC4F0E51EACD68D317FE4F814A125 /* ReplaySubject.swift */; };
 		A471D512260199E012BCE88F066C44E6 /* ToArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9652701C734D1AB99F5D68E16D375D24 /* ToArray.swift */; };
 		A4BFBC4A2730467200C169B1 /* Image+Download.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BFBC492730467200C169B1 /* Image+Download.swift */; };
+		A4BFBC4C27315DC200C169B1 /* ReviewRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BFBC4B27315DC200C169B1 /* ReviewRequest.swift */; };
 		A5A4CA866D79259CD684078C30DC663F /* AtomicInt.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25FC1AF69A4F9E4D7F8E2F0DCF2CF7F /* AtomicInt.swift */; };
 		A5C91DED8C6A1C2B424E2C09F70612A0 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2308F16CB04125243DA832FFB7EC74E /* Error.swift */; };
 		A63672E2253D75CED2282E750F561B38 /* UITextView+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085EA51496D5D7A901E26ECEAD3FA25B /* UITextView+Rx.swift */; };
@@ -807,6 +808,7 @@
 		A2BFA4507FA2EF3E48671FB628493A5C /* ProductList-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ProductList-dummy.m"; sourceTree = "<group>"; };
 		A31A7EA9DF1BB02632F78B87F42F6E64 /* Core-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Core-dummy.m"; sourceTree = "<group>"; };
 		A4BFBC492730467200C169B1 /* Image+Download.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+Download.swift"; sourceTree = "<group>"; };
+		A4BFBC4B27315DC200C169B1 /* ReviewRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ReviewRequest.swift; path = APILayer/ReviewRequest.swift; sourceTree = "<group>"; };
 		A5FE41D0BCBC55E9232EA2129F8C7104 /* CompositeDisposable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CompositeDisposable.swift; path = RxSwift/Disposables/CompositeDisposable.swift; sourceTree = "<group>"; };
 		A6BFD59A742DFF9508935089BA1CA0DB /* Pods-Adidas Test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Adidas Test.debug.xcconfig"; sourceTree = "<group>"; };
 		A7166D80BA34ABBF6227EDC6CF201F7D /* SnapKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SnapKit-Info.plist"; sourceTree = "<group>"; };
@@ -1454,6 +1456,7 @@
 				2BE1C88D5683F0BC2AF2F66E2C438D0F /* ProductRequest.swift */,
 				63ADD7964865407B8BA26F2BF8837BBE /* Pod */,
 				AA34D1B314E2CC56395F7A5D98CB67A7 /* Support Files */,
+				A4BFBC4B27315DC200C169B1 /* ReviewRequest.swift */,
 			);
 			name = APILayer;
 			path = ../Modules/APILayer;
@@ -2409,6 +2412,7 @@
 				DAA74D10A8694CD60B9A1D97C34ED48D /* APIClient.swift in Sources */,
 				CE48CF006712A88B780A830FBDD5B4B5 /* APILayer-dummy.m in Sources */,
 				72CF606F8C6B83A68A2F92A6404D5626 /* APIRequest.swift in Sources */,
+				A4BFBC4C27315DC200C169B1 /* ReviewRequest.swift in Sources */,
 				088CF1F21C1395F035B1BEB7FBE1E16A /* ProductRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

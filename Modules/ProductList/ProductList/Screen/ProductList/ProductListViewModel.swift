@@ -43,7 +43,7 @@ class ProductListViewModel: ViewModelType {
     }
 
     private func observeInput() {
-        disposeBag.insert([
+        disposeBag.insert(
             onDidLoad
                 .map { ProductListRequest() }
                 .flatMapLatest { [unowned self] request -> Observable<[ProductModel]> in
@@ -59,6 +59,6 @@ class ProductListViewModel: ViewModelType {
 
             onTapProduct
                 .bind(to: onNext)
-        ])
+        )
     }
 }
