@@ -1093,7 +1093,7 @@
 			children = (
 				E8F2D059AA2400DAD1DE33EDCF603D41 /* APILayer */,
 				D5E1D27F5391784BAC3D21B19A42D28D /* Core */,
-				4129C3C3484E27B23455A6494019B32B /* ProductList */,
+				4129C3C3484E27B23455A6494019B32B /* Product */,
 				FD69547C73891B8CF231E9FEB23F21DC /* Review */,
 			);
 			name = "Development Pods";
@@ -1253,7 +1253,7 @@
 			path = "../../Pods/Target Support Files/ProductList";
 			sourceTree = "<group>";
 		};
-		4129C3C3484E27B23455A6494019B32B /* ProductList */ = {
+		4129C3C3484E27B23455A6494019B32B /* Product */ = {
 			isa = PBXGroup;
 			children = (
 				B33E8E308B290E8304C5C9C1E1AE5FA6 /* Images.xcassets */,
@@ -1263,8 +1263,8 @@
 				AE9F5AD61306FDB2D15671DF9E1E8A57 /* Screen */,
 				3BD41D445D0511CC610D0B8EC499F6C1 /* Support Files */,
 			);
-			name = ProductList;
-			path = ../Modules/ProductList;
+			name = Product;
+			path = ../Modules/Product;
 			sourceTree = "<group>";
 		};
 		575DB2FD13768C95B2F15A5514F96487 /* Support Files */ = {
